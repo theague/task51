@@ -1,0 +1,30 @@
+body {
+    font-size: 10px;
+    margin-left: 0;
+}
+
+
+#pattern1 {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    width: 85%;
+}
+
+#pattern2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    width: 20%;
+}
+
+#pattern3 {
+    bottom: 0;
+    position: absolute;
+    width: 75%;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

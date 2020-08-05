@@ -39,6 +39,24 @@ body {
     width: 85%;
 }
 
+.previous {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid black;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-right: 0;
+}
+
+.next {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid black;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-left: 0;
+}
+
 #pattern2 {
     display: block;
     margin-left: auto;

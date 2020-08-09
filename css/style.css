@@ -35,13 +35,17 @@ body {
     flex-direction: column;
 }
 
-#tanya {
+#tanya, #john {
     border-radius: 5px;
     height: 265px;
     left: 60px;
     position: absolute;
     top: 56px;
     width: 255px;
+}
+
+#john {
+    display: none;
 }
 
 #buttons {
@@ -99,5 +103,8 @@ body {
     font-size: 15px;
 }
 
+#johnCard {
+    display: none;
+}
 
 /* Responsive size designed to desktop size of 1440px

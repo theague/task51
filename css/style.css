@@ -1,3 +1,5 @@
+/*Deisigned to mobile screen size of 375px x 675px */
+
 @font-face {
     font-family: 'InterBold';
     src: url(../font/Inter-bold.ttf);
@@ -14,80 +16,88 @@
 }
 
 body {
+    background: url(../img/pattern-bg.svg) 25px 25px / 325px 325px no-repeat, 
+    url(../img/pattern-quotes.svg) 160px 380px / 60px no-repeat, 
+    url(../img/pattern-curve.svg) 0 600px / 300px no-repeat;
     font-family: 'InterLight', Arial, Helvetica, sans-serif;
+    margin-top: 0;
     margin-left: 0;
-}
-
-#top {
+    margin-right: 0;
     position: relative;
 }
 
-#tanya {
-    border-radius: .5rem;
-    position: absolute;
-    top: 1.75rem;
-    width: 67%;
-    display: block;
-    left: 0;
-    margin: auto;
-    right: 0;
+#top {
+    padding-top: 100%;
 }
 
-#pattern1 {
-    display: block;
-    margin: 1.5rem auto 0 auto;
-    width: 85%;
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#tanya {
+    border-radius: 5px;
+    height: 265px;
+    left: 60px;
+    position: absolute;
+    top: 56px;
+    width: 255px;
+}
+
+#buttons {
+    background-color: #fff;
+    border-radius: 25px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+
+#previous {
+    height: 14px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    margin-right: 25px
 }
 
 .previous {
     background-color: #fff;
-    padding: 1rem;
-    border: 1px solid black;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    margin-right: 0;
+}
+
+#next {
+    height: 14px;
+    padding-top: 12px;
+    padding-bottom: 8px;
 }
 
 .next {
     background-color: #fff;
-    padding: 1rem;
-    border: 1px solid black;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    margin-left: 0;
+
 }
 
-#pattern2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    width: 20%;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-top: -1.5rem;
-    padding: 0 1.1rem;
+#bottom {
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
     text-align: center;
 }
 
 .name {
-    color: hsl(240, 38%, 20%);
     font-family: 'InterBold', Arial, Helvetica, sans-serif;
-    font-size: .9rem;
-    margin-bottom: .3rem;
-    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .title {
-    color: hsl(240, 18%, 77%);
+    color: #d3d3d3;
     font-family: 'InterBold', Arial, Helvetica, sans-serif;
-    font-size: .9rem;
+    font-size: 15px;
 }
 
-#pattern3 {
-    bottom: -100;
-    position: absolute;
-    width: 75%;
-}
+
+/* Responsive size designed to desktop size of 1440px

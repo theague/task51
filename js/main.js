@@ -5,25 +5,25 @@ let cardTanya = document.getElementById('tanyaCard');
 let portraitHe = document.getElementById('john');
 let cardJohn = document.getElementById('johnCard');
 
-
-// set function for clicking next
-document.getElementById('next').onclick = function() {display()};
-
-function display () {
-    cardTanya.style.display = "none";
+const display = () => {
     portraitShe.style.display = "none";
-
     portraitHe.style.display = "block";
+
+    cardTanya.style.display = "none";
     cardJohn.style.display = "block";
 }
 
-// set function for clicking previous
-document.getElementById('previous').onclick = function() {changeDisplay()};
-
-function changeDisplay () {
-    cardTanya.style.display = "block";
+const changeDisplay = () => {
     portraitShe.style.display = "block";
-
     portraitHe.style.display = "none";
-    cardJohn.style.display = "none";    
+
+    cardTanya.style.display = "block";
+    cardJohn.style.display = "none";
 }
+// TODO: Show you how would do it.
+
+
+// Declare functions first
+// Invoke them second
+document.getElementById('previous').onclick = () => changeDisplay(); // removed nested function
+document.getElementById('next').onclick = () => display();

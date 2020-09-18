@@ -16,8 +16,8 @@
 }
 
 body {
-    background: url(../img/pattern-bg.svg) 25px 25px / 325px 325px no-repeat, 
-    url(../img/pattern-quotes.svg) 160px 380px / 60px no-repeat, 
+    background: url(../img/pattern-bg.svg) 25px 25px / 325px 325px no-repeat,
+    url(../img/pattern-quotes.svg) 160px 380px / 60px no-repeat,
     url(../img/pattern-curve.svg) 0 600px / 300px no-repeat;
     font-family: 'InterLight', Arial, Helvetica, sans-serif;
     margin-top: 0;
@@ -42,10 +42,6 @@ body {
     position: absolute;
     top: 56px;
     width: 255px;
-}
-
-#john {
-    display: none;
 }
 
 #buttons {
@@ -103,17 +99,14 @@ body {
     font-size: 15px;
 }
 
-#johnCard {
-    display: none;
-}
 
 /* Responsive size designed to desktop size of 1440px x 850px */
 @media (min-width: 376px) and (max-width: 1440px){
     body {
-        background: url(../img/pattern-bg.svg) 680px 40px / 710px 710px no-repeat, 
-        url(../img/pattern-quotes.svg) 225px 210px / 140px no-repeat, 
+        background: url(../img/pattern-bg.svg) 680px 40px / 710px 710px no-repeat,
+        url(../img/pattern-quotes.svg) 225px 210px / 140px no-repeat,
         url(../img/pattern-curve.svg) 0 700px / 600px no-repeat;
-        
+
     }
 
     .container {
@@ -124,7 +117,7 @@ body {
     img {
         box-shadow: -8px 15px 10px -15px #9e9e9e;
     }
-    
+
     #tanya, #john {
         border-radius: 5px;
         position: absolute;
@@ -134,7 +127,7 @@ body {
         height: 585px;
         width: 585px;
     }
-    
+
     #buttons {
         border-radius: 50px;
         position: absolute;
@@ -187,11 +180,16 @@ body {
 
     br{content:' ';}
     br:after{content:' ';}
-    
+
     .title {
         color: #d3d3d3;
         font-size: 25px;
         font-family: 'InterMedium', Arial, Helvetica, sans-serif;
 
     }
+}
+
+
+#bottom > div:not(:first-child) {
+    display: none;
 }

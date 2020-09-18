@@ -1,29 +1,40 @@
-// get elements to display or hide on button click
-let portraitShe = document.getElementById('tanya');
-let cardTanya = document.getElementById('tanyaCard');
 
-let portraitHe = document.getElementById('john');
-let cardJohn = document.getElementById('johnCard');
+/***
+ * 1.Get all the cards within container
+ * 2. Create a toggle functionality
+ *    By toggle I mean to hide one card and display the other
+ * 3. Add the controllers logic
+ *     what happens when the current item is the next element of an Array
+ *
+ * 4. Set up the controllers in place
+ *
+ * */
 
-const display = () => {
-    portraitShe.style.display = "none";
-    portraitHe.style.display = "block";
 
-    cardTanya.style.display = "none";
-    cardJohn.style.display = "block";
+let initialIndex = 0;
+
+// 1.Get all the cards within container
+const cardElements = document.querySelector('#bottom').children;
+
+
+// 2. Create toggle functionality
+const showCard = () => {
+    // Hide old card
+    cardElements[initialIndex].style.display = 'none';
+
+    ++initialIndex;
+    // Show new card
+    cardElements[initialIndex].style.display = 'block';
+
+    console.log('⚽️');
 }
 
-const changeDisplay = () => {
-    portraitShe.style.display = "block";
-    portraitHe.style.display = "none";
 
-    cardTanya.style.display = "block";
-    cardJohn.style.display = "none";
-}
-// TODO: Show you how would do it.
+// 3. Add Controllers logic
 
 
-// Declare functions first
-// Invoke them second
-document.getElementById('previous').onclick = () => changeDisplay(); // removed nested function
-document.getElementById('next').onclick = () => display();
+// 4. Setup controllers in place
+
+cardElements[0].style.display = 'block';
+// showCard();
+// console.log('🤓');

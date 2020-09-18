@@ -1,29 +1,56 @@
-// get elements to display or hide on button click
-let portraitShe = document.getElementById('tanya');
-let cardTanya = document.getElementById('tanyaCard');
 
-let portraitHe = document.getElementById('john');
-let cardJohn = document.getElementById('johnCard');
+/***
+ * 1.Get all the cards within container
+ * 2. Create a toggle functionality
+ *    By toggle I mean to hide one card and display the other
+ * 3. Setup controllers in place
+ *  3.1 Select controllers from the dom
+ *  3.2 Add event listeners
+ * 4. Improve controllers logic
+ * TODO: Fix the image not being updated.
+ * TODO: Implement ESlint int this repo.
+ * */
 
 
-// set function for clicking next
-document.getElementById('next').onclick = function() {display()};
+let currentIndex = 0;
 
-function display () {
-    cardTanya.style.display = "none";
-    portraitShe.style.display = "none";
+// 1.Get all the cards within container
+const cardElements = document.querySelector('#bottom').children;
 
-    portraitHe.style.display = "block";
-    cardJohn.style.display = "block";
+
+// 2. Create toggle functionality
+const showCard = (showPrevious = false) => {
+    if (showPrevious) {
+        if( currentIndex === 0){
+            // If so, hide first item and show the last one
+            cardElements[0].style.display = 'none';
+            currentIndex = cardElements.length - 1;
+            cardElements[currentIndex].style.display = 'block';
+            return
+        }
+
+        cardElements[currentIndex].style.display = 'none';
+        cardElements[currentIndex - 1].style.display = 'block';
+        --currentIndex;
+        return
+    }
+
+
+    if (currentIndex === cardElements.length - 1) {
+        cardElements[currentIndex].style.display = 'none';
+        cardElements[0].style.display = 'block';
+        currentIndex = 0;
+        return;
+    }
+
+    cardElements[currentIndex].style.display = 'none';
+    cardElements[currentIndex + 1].style.display = 'block';
+    ++currentIndex;
 }
 
-// set function for clicking previous
-document.getElementById('previous').onclick = function() {changeDisplay()};
 
-function changeDisplay () {
-    cardTanya.style.display = "block";
-    portraitShe.style.display = "block";
-
-    portraitHe.style.display = "none";
-    cardJohn.style.display = "none";    
-}
+// 3. Setup controllers in place
+    // 3.1 Select controllers from the dom
+    // 3.2 Add event listeners
+    document.querySelector('.previous').onclick = () => showCard(true);
+    document.querySelector('.next').onclick = () => showCard();
